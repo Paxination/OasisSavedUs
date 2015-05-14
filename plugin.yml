@@ -1,0 +1,12 @@
+name: OasisSavedUs
+main: oasis.OasisSavedUs
+version: 1.0
+description: Oasis World Saving Plugin
+author: Paxination
+commands:
+
+  saveus:
+    description: Saves all worlds and players to disk.
+    usage: "Usage: /<command>"
+    permission: oasissaveus.saveus
+    permission-message: You don't have permissions for <permission>
