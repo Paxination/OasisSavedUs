@@ -27,6 +27,7 @@ public class NMSHandler implements NMS{
 							+ worldserver.worldProvider.getName());
 				}
 				try {
+					worldserver.worldMaps.a();
 					worldserver.save(true, null);
 				} catch (ExceptionWorldConflict e) {
 					// TODO Auto-generated catch block

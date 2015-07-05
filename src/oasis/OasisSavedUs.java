@@ -17,9 +17,12 @@ public class OasisSavedUs extends JavaPlugin {
 		String version = packageName.substring(packageName.lastIndexOf('.') + 1 );
 		
 		try {
-			final Class<?> clazz = Class.forName("oasis.nms." + version + ".NMSHandler");
-			if(NMS.class.isAssignableFrom(clazz)){
-				this.nmsHandler = (NMS) clazz.getConstructor().newInstance();
+			if (version.contains("v1_8")) {
+				final Class<?> clazz = Class.forName("oasis.nms.v1_8_R1.NMSHandler");
+				if (NMS.class.isAssignableFrom(clazz)) {
+					this.nmsHandler = (NMS) clazz.getConstructor()
+							.newInstance();
+				}
 			}
 		} catch (final Exception e) {
 			// TODO Auto-generated catch block
